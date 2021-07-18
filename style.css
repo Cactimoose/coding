@@ -7,6 +7,10 @@ sans-serif
 monospace
 */
 
+:root {
+	--slider-bg: rgb(53, 184, 207);
+}
+
 * {
 	font-family: "Hind", system-ui, sans-serif;
 	font-weight: 700;
@@ -28,4 +32,60 @@ monospace
 
 div:first-child {
 	background: cyan;
+}
+
+.slider-box {
+	width: 2em;
+	height: 2em;
+	background: hsl(0, 100%, 50%);
+	transition: background 0.2s;
+}
+
+input[type="range"] {
+	-webkit-appearance: none;
+	width: 100%;
+	background: var(--slider-bg);
+	height: 1em;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+	outline: none;
+}
+
+input[type="range"]::-ms-track {
+	width: 100%;
+	cursor: pointer;
+
+	background: var(--slider-bg);
+	border-color: var(--slider-bg);
+	color: var(--slider-bg);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 16px;
+	width: 16px;
+	border-radius: 3px;
+	background: firebrick;
+	cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+	height: 16px;
+	width: 16px;
+	border-radius: 3px;
+	background: firebrick;
+	cursor: pointer;
+}
+
+input[type="range"]::-ms-thumb {
+	height: 16px;
+	width: 16px;
+	border-radius: 3px;
+	background: firebrick;
+	cursor: pointer;
 }
